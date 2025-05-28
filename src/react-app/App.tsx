@@ -1,13 +1,10 @@
-// src/App.tsx
-
 import { useState } from "react";
-import "./App.css";
 
 function App() {
 	const [name, setName] = useState("unknown");
 
 	return (
-		<>
+		<div className="p-4">
 			<button
 				type="submit"
 				onClick={() => {
@@ -16,11 +13,11 @@ function App() {
 						.then((data) => setName(data.name));
 				}}
 				aria-label="get name"
-				className="bg-blue-500"
+				className="rounded-xl bg-gray-300 px-2 py-1 border border-gray-400 hover:bg-gray-400"
 			>
 				ファイルをアップロード {name}
 			</button>
-		</>
+		</div>
 	);
 }
 
