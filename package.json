@@ -20,6 +20,9 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@cloudflare/vite-plugin": "1.0.8",
+		"@types/gapi": "^0.0.47",
+		"@types/google.accounts": "^0.0.17",
+		"@types/google.picker": "^0.0.50",
 		"@types/node": "22.14.1",
 		"@types/react": "19.0.10",
 		"@types/react-dom": "19.0.4",

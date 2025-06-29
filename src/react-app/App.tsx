@@ -1,12 +1,18 @@
 import { useState } from "react";
 import Settings from "./components/SettingsPage";
+import HomePage from "./components/HomePage";
 
 function App() {
 	const [showSettings, setShowSettings] = useState(false);
+	const [showHomePage, setShowHomePage] = useState(false);
 	const [name, setName] = useState("unknown");
 
 	if (showSettings) {
 		return <Settings onNavigateBack={() => setShowSettings(false)} />;
+	}
+
+	if (showHomePage) {
+		return <HomePage />;
 	}
 
 	return (
@@ -23,7 +29,15 @@ function App() {
 				aria-label="get name"
 				className="rounded-xl bg-indigo-500 text-white px-4 py-2 hover:bg-indigo-600"
 			>
-				ファイルをアップロード {name}
+				APIテスト {name}
+			</button>
+
+			<button
+				type="button"
+				onClick={() => setShowHomePage(true)}
+				className="mt-4 rounded-xl bg-gray-200 px-4 py-2 border border-gray-400 hover:bg-gray-300"
+			>
+				ファイルをアップロード
 			</button>
 
 			{/* TODO: ファイル名入力エリア */}
