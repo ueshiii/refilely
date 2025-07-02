@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Settings from "./components/SettingsPage";
 import HomePage from "./components/HomePage";
+import Settings from "./components/SettingsPage";
 
 function App() {
 	const [showSettings, setShowSettings] = useState(false);
